@@ -2,14 +2,14 @@ import { Router } from 'express';
 
 export const authRouter = Router();
 
-authRouter.post('/signup', (req, res) => {
+authRouter.post('/sign-up', (req, res) => {
    res.json({ title: 'Sign up' });
 });
 
-authRouter.post('/signin', (req, res) => {
+authRouter.post('/sign-in', (req, res) => {
    res.json({ title: 'Sign in' });
 });
 
-authRouter.post('/signout', (req, res) => {
+authRouter.post('/sign-out', (req, res) => {
    res.json({ title: 'Sign out' });
 });
