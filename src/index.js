@@ -4,8 +4,13 @@ import { authRouter } from '../routes/auth.routes.js';
 import { userRouter } from '../routes/user.routes.js';
 import { subscriptionRouter } from '../routes/subscription.routes.js';
 import { connectToDabatase } from '../database/db.js';
+import cookieParser from 'cookie-parser';
 
 const app = express();
+
+app.use(express.json());
+
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
    res.send('Welcome to Subscription Tracker API');
