@@ -23,10 +23,7 @@ export async function getUser(req, res, next) {
          throw error;
       }
 
-      res.status(200).json({
-         success: true,
-         data: user,
-      });
+      res.status(200).json({ success: true, data: user });
    } catch (error) {
       next(error);
    }
