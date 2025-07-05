@@ -21,7 +21,7 @@ export async function authorize(req, res, next) {
 
       if (!user) return res.status(401).json({ message: 'Unauthorized' });
 
-      req = user.req;
+      req.user = user;
 
       next();
    } catch (error) {
