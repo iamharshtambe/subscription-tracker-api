@@ -86,4 +86,13 @@ export async function signIn(req, res, next) {
    }
 }
 
-export async function signOut(req, res, next) {}
+export async function signOut(req, res, next) {
+   try {
+      res.status(200).json({
+         success: true,
+         message: 'User signed out successfully',
+      });
+   } catch (error) {
+      next(error);
+   }
+}
